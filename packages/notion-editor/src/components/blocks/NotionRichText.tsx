@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { RichTextItemResponse } from "@editor/lib/types";
+import { RichTextItemResponse } from "@editor/src/lib/types";
 import { cn, isEmptyOrSpace } from "@libs/utils";
-import { theme } from "@editor/lib/theme";
+import { theme } from "@editor/src/lib/theme";
 
 const RichTextItem = ({ richText }: { richText: RichTextItemResponse }) => {
   const { type, text, annotations } = richText;

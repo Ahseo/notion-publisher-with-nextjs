@@ -9,19 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ui": "*",
+    "axios": "^1.7.7",
+    "libs": "*",
     "next": "14.2.6",
+    "notion-editor": "*",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "eslint-config": "*",
-    "typescript-config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
+    "eslint-config": "*",
     "eslint-config-next": "14.2.6",
-    "typescript": "^5"
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5",
+    "typescript-config": "*"
   }
 }

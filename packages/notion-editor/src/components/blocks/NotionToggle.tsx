@@ -1,6 +1,6 @@
-import { ToggleBlockObjectResponse } from "@editor/lib/types";
+import { ToggleBlockObjectResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
-import { theme } from "@editor/lib/theme";
+import { theme } from "@editor/src/lib/theme";
 import { NotionPreview } from "../NotionPreview";
 import { cn } from "@libs/utils";
 import { NotionToggleButton } from "./NotionToggleButton";

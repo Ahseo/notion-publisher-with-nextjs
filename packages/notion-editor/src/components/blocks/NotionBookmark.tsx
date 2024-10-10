@@ -1,6 +1,6 @@
-import { getLinkPreviewData } from "@editor/api";
-import { BookmarkBlockObjectResponse } from "@editor/lib/types";
-import { OgResultObject } from "@editor/lib/types/og";
+import { getLinkPreviewData } from "@editor/src/api";
+import { BookmarkBlockObjectResponse } from "@editor/src/lib/types";
+import { OgResultObject } from "@editor/src/lib/types/og";
 import { useEffect, useState } from "react";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";

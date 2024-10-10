@@ -1,4 +1,4 @@
-import { CodeBlockObjectResponse } from "@editor/lib/types";
+import { CodeBlockObjectResponse } from "@editor/src/lib/types";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { DefaultBlockProps } from "./type";
 import { cn } from "@libs/utils";

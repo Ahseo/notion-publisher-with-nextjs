@@ -1,5 +1,5 @@
 import { DefaultBlockProps } from "./type";
-import { CalloutBlockObjectResponse } from "@editor/lib/types";
+import { CalloutBlockObjectResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { InitialBlock } from "./InitialBlock";
 

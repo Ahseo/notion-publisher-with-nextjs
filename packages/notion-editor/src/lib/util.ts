@@ -36,16 +36,10 @@ export const convertLanguageToOtherStyle = (language: string) => {
 
 export const getFileLink = (file: BlockFileObject) => {
   const id = file.type === "file" ? file.file.id : "";
-  // 기존 supabase로 저장된 데이터가 있어서 여긴 수정 x
-  const url =
-    file.type === "file" ? file.file.supabase_url || "" : file.external.url;
-  const originalUrl = file.type === "file" ? file.file.url : file.external.url;
-  const originalFilename = getFilenameFromUrl(originalUrl);
+  const url = file.type === "file" ? file.file.url || "" : file.external.url;
 
   return {
     id,
     url,
-    originalFilename,
-    href: `/api/file/download?url=${url}&filename=${originalFilename}`,
   };
 };

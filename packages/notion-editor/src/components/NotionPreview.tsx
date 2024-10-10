@@ -1,5 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
-import { BlockObjectResponse } from "@editor/lib/types";
+import { BlockObjectResponse } from "@editor/src/lib/types";
 import {
   NotionParagraph,
   NotionHeading,
@@ -35,7 +37,6 @@ export const NotionPreview = ({ loading = false, blocks }: Props) => {
 
     blockList.map((block, idx) => {
       const key = `${block.id}:${block.type}:${idx}`;
-
       if (
         block.type == "numbered_list_item" &&
         block.children &&
@@ -55,36 +56,41 @@ export const NotionPreview = ({ loading = false, blocks }: Props) => {
       }
 
       if (block.type != "numbered_list_item" && order != 0) order = 0;
-      const props: Omit<DefaultBlockProps, "block"> = {
-        key,
+      const props: Omit<Omit<DefaultBlockProps, "block">, "key"> = {
         level: parentLevel,
         children,
       };
 
       switch (block.type) {
         case "paragraph":
-          result.push(<NotionParagraph block={block} {...props} />);
+          result.push(<NotionParagraph key={key} block={block} {...props} />);
           break;
         case "image":
-          result.push(<NotionImage block={block} {...props} />);
+          result.push(<NotionImage key={key} block={block} {...props} />);
           break;
         case "video":
-          result.push(<NotionVideo block={block} {...props} />);
+          result.push(<NotionVideo key={key} block={block} {...props} />);
           break;
         case "code":
-          result.push(<NotionCodeBlock block={block} {...props} />);
+          result.push(<NotionCodeBlock key={key} block={block} {...props} />);
           break;
         case "heading_1":
         case "heading_2":
         case "heading_3":
           result.push(
-            <NotionHeading {...props} block={block} level={parentLevel - 1} />
+            <NotionHeading
+              key={key}
+              {...props}
+              block={block}
+              level={parentLevel - 1}
+            />
           );
           break;
         case "numbered_list_item":
           order += 1;
           result.push(
             <NotionNumberedList
+              key={key}
               {...props}
               order={order}
               block={block}
@@ -93,27 +99,27 @@ export const NotionPreview = ({ loading = false, blocks }: Props) => {
           );
           break;
         case "bulleted_list_item":
-          result.push(<NotionNumberedList block={block} {...props} />);
-          break;
-        case "bookmark":
-          result.push(<NotionBookmark block={block} {...props} />);
-          break;
-        case "file":
-          result.push(<NotionFile block={block} {...props} />);
-          break;
-        case "toggle":
           result.push(
-            <NotionToggle block={block} {...props} level={parentLevel - 1} />
+            <NotionNumberedList key={key} block={block} {...props} />
           );
           break;
+        case "bookmark":
+          result.push(<NotionBookmark key={key} block={block} {...props} />);
+          break;
+        case "file":
+          result.push(<NotionFile key={key} block={block} {...props} />);
+          break;
+        case "toggle":
+          result.push(<NotionToggle key={key} block={block} {...props} />);
+          break;
         case "divider":
-          result.push(<NotionDivider block={block} {...props} />);
+          result.push(<NotionDivider key={key} block={block} {...props} />);
           break;
         case "quote":
-          result.push(<NotionQuote block={block} {...props} />);
+          result.push(<NotionQuote key={key} block={block} {...props} />);
           break;
         case "callout":
-          result.push(<NotionCallout block={block} {...props} />);
+          result.push(<NotionCallout key={key} block={block} {...props} />);
         default:
           break;
       }

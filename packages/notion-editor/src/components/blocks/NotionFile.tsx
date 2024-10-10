@@ -1,5 +1,5 @@
-import { FileBlockObjectResponse } from "@editor/lib/types";
-import { getFileLink } from "@editor/lib/util";
+import { FileBlockObjectResponse } from "@editor/src/lib/types";
+import { getFileLink } from "@editor/src/lib/util";
 import { NotionCaption } from "./NotionCaption";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { cn } from "@libs/utils";
-import { ApiColor, BlockType } from "@editor/lib/types";
-import { getIndentation, theme } from "@editor/lib/theme";
+import { ApiColor, BlockType } from "@editor/src/lib/types";
+import { getIndentation, theme } from "@editor/src/lib/theme";
 
 type Props = {
   element: keyof JSX.IntrinsicElements;

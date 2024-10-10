@@ -1,4 +1,4 @@
-import { ParagraphBlockObjectResponse } from "@editor/lib/types";
+import { ParagraphBlockObjectResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";

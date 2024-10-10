@@ -1,4 +1,4 @@
-import { DividerBlockObjectResponse } from "@editor/lib/types";
+import { DividerBlockObjectResponse } from "@editor/src/lib/types";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";
 

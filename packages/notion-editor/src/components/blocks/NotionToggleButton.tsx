@@ -15,9 +15,8 @@ export const NotionToggleButton = ({ component: { parent, child } }: Props) => {
     preventEvent(e);
     setOpened(!opened);
   };
-
   return (
-    <div className="flex">
+    <div className="flex items-start">
       <div className="shrink-0 grow-0 basis-[1.5em]">
         <button
           className="flex items-center justify-center w-full h-full"

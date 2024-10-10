@@ -1,11 +1,11 @@
 import {
   BulletedListItemBlockObjectResponse,
   NumberedListItemBlockObjectResponse,
-} from "@editor/lib/types";
+} from "@editor/src/lib/types";
 import { DefaultBlockProps } from "./type";
 import { NotionRichText } from "./NotionRichText";
 import { cn } from "@libs/utils";
-import { getListStyle } from "@editor/lib/theme";
+import { getListStyle } from "@editor/src/lib/theme";
 import { InitialBlock } from "./InitialBlock";
 
 type Props = {

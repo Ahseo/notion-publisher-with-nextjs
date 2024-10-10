@@ -2,7 +2,7 @@ import {
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
-} from "@editor/lib/types";
+} from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { NotionToggleButton } from "./NotionToggleButton";
 import { DefaultBlockProps } from "./type";

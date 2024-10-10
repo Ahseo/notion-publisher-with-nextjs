@@ -1,5 +1,5 @@
-import { theme } from "@editor/lib/theme";
-import { RichTextItemResponse } from "@editor/lib/types";
+import { theme } from "@editor/src/lib/theme";
+import { RichTextItemResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { cn } from "@libs/utils";
 

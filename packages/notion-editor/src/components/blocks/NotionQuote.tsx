@@ -1,5 +1,5 @@
 import { DefaultBlockProps } from "./type";
-import { QuoteBlockObjectResponse } from "@editor/lib/types";
+import { QuoteBlockObjectResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { InitialBlock } from "./InitialBlock";
 

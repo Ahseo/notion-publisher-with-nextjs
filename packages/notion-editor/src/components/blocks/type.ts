@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { BlockObjectResponse } from "@editor/lib/types";
+import { BlockObjectResponse } from "@editor/src/lib/types";
 
 export type DefaultBlockProps = {
   key: string;

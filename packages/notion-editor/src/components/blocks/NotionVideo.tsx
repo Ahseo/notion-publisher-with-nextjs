@@ -1,9 +1,9 @@
-import { VideoBlockObjectResponse } from "@editor/lib/types";
+import { VideoBlockObjectResponse } from "@editor/src/lib/types";
 import ReactPlayer from "react-player";
 import { NotionCaption } from "./NotionCaption";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";
-import { getFileLink } from "@editor/lib/util";
+import { getFileLink } from "@editor/src/lib/util";
 
 type Props = {
   block: VideoBlockObjectResponse;
