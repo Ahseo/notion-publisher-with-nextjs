@@ -46,3 +46,10 @@ export const getFileLink = (file: BlockFileObject) => {
     href: `/api/file/download?url=${url}&filename=${originalFilename}`,
   };
 };
+
+export const getImageUrl = (file: BlockFileObject) => {
+  const url = file.type === "file" ? file.file.url || "" : file.external.url;
+  return {
+    url,
+  };
+};

@@ -1,17 +1,16 @@
-import { useState } from "react";
 import { ImageBlockObjectResponse } from "@editor/src/lib/types";
-import { cn, preventEvent } from "@common-lib/utils";
+import { cn } from "@common-lib/utils";
 import { NotionCaption } from "./NotionCaption";
 import { DefaultBlockProps } from "./type";
 import { theme } from "@editor/src/lib/theme";
-import { getFileLink } from "@editor/src/lib/util";
+import { getImageUrl } from "@editor/src/lib/util";
 
 type Props = {
   block: ImageBlockObjectResponse;
 } & DefaultBlockProps;
 
 export const NotionImage = ({ block }: Props) => {
-  const { url } = getFileLink(block.image);
+  const { url } = getImageUrl(block.image);
 
   return (
     <figure className={cn(theme.blockType.image)}>

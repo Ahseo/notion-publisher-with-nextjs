@@ -6,7 +6,7 @@ import { BlockObjectResponse, PartialBlockObjectResponse } from "notion-editor";
 */
 const notionIntegrationToken = "Bearer " + process.env.NOTION_INTEGRATION_TOKEN;
 
-export const getNotionBlocks = async (blockId: string) => {
+export const getNotionBlocks = async (pageId: string, blockId: string) => {
   const config = {
     method: "GET",
     headers: {
@@ -31,13 +31,17 @@ export const getNotionBlocks = async (blockId: string) => {
   return data.results;
 };
 
-export const getChildrenBlocks = async (block: PartialBlockObjectResponse) => {
+export const getChildrenBlocks = async (
+  pageId: string,
+  block: PartialBlockObjectResponse
+) => {
   const initialBlocks: PartialBlockObjectResponse[] = await getNotionBlocks(
+    pageId,
     block.id
   );
   const childrenBlocks: PartialBlockObjectResponse[] = await Promise.all(
     initialBlocks.map(async (childBlock) => {
-      const result = await getChildrenBlocks(childBlock);
+      const result = await getChildrenBlocks(pageId, childBlock);
       return result;
     })
   );
