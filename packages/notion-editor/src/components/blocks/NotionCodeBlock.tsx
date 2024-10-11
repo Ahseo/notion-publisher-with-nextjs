@@ -1,7 +1,7 @@
 import { CodeBlockObjectResponse } from "@editor/src/lib/types";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { DefaultBlockProps } from "./type";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 
 type Props = {
   block: CodeBlockObjectResponse;

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 import { ApiColor, BlockType } from "@editor/src/lib/types";
 import { getIndentation, theme } from "@editor/src/lib/theme";
 

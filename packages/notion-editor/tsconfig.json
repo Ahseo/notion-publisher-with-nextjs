@@ -4,8 +4,9 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./src/typings"],
     "paths": {
-      "@libs/*": ["../libs/src/*"],
+      "@common-lib/*": ["../common-lib/src/*"],
       "@editor/*": ["./*"]
     }
   }

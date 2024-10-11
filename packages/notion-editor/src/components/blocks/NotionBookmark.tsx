@@ -4,7 +4,7 @@ import { OgResultObject } from "@editor/src/lib/types/og";
 import { useEffect, useState } from "react";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 
 type Props = {
   block: BookmarkBlockObjectResponse;

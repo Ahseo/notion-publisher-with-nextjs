@@ -10,15 +10,14 @@ import {
   NotionCodeBlock,
   NotionBookmark,
   NotionToggle,
+  NotionFile,
+  NotionNumberedList,
+  NotionDivider,
+  NotionQuote,
+  NotionCallout,
 } from "./blocks";
-import { NotionFile } from "./blocks/NotionFile";
-import {} from "./blocks/NotionToggleButton";
-import { NotionNumberedList } from "./blocks/NotionNumberedList";
-import { DefaultBlockProps } from "./blocks/type";
-import { NotionDivider } from "./blocks/NotionDivider";
-import { NotionQuote } from "./blocks/NotionQuote";
-import { NotionCallout } from "./blocks/NotionCallout";
 import Twemoji from "react-twemoji";
+import { DefaultBlockProps } from "./blocks/type";
 
 interface Props {
   loading?: boolean;

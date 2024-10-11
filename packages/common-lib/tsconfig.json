@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@libs/*": ["./src/*"]
+      "@common-lib/*": ["./src/*"],
+      "@editor/*": ["../notion-editor/*"]
     },
     "lib": ["DOM"],
   },

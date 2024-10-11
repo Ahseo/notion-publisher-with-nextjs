@@ -1,4 +1,4 @@
-import { preventEvent } from "@libs/utils";
+import { preventEvent } from "@common-lib/utils";
 import React, { ReactNode, useState } from "react";
 
 interface Props {

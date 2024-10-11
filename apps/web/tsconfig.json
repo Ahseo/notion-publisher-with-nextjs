@@ -5,14 +5,21 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "typeRoots": ["../types"],
+    "paths": {
+      "@common-lib/*": ["../../packages/common-lib/src/*"],
+      "@editor/*": ["../../packages/notion-editor/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../packages/types/index.d.ts"
   ],
   "exclude": ["node_modules"]
 }

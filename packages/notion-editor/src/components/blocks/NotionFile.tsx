@@ -3,7 +3,7 @@ import { getFileLink } from "@editor/src/lib/util";
 import { NotionCaption } from "./NotionCaption";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 
 type Props = {
   block: FileBlockObjectResponse;

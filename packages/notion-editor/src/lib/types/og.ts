@@ -1,10 +1,3 @@
-type ImageObject = {
-  height?: number;
-  width?: number;
-  type?: string;
-  url: string;
-};
-
 export type OgResultObject = {
   // ogTitle?: string;
   // ogType?: string;

@@ -4,7 +4,7 @@ import {
 } from "@editor/src/lib/types";
 import { DefaultBlockProps } from "./type";
 import { NotionRichText } from "./NotionRichText";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 import { getListStyle } from "@editor/src/lib/theme";
 import { InitialBlock } from "./InitialBlock";
 

@@ -1,5 +1,3 @@
-import axios from "axios";
-import { cn } from "libs";
 import {
   BlockObjectResponse,
   NotionPreview,
@@ -24,7 +22,7 @@ export default async function Home() {
         return result;
       })
     );
-    return <NotionPreview blocks={updatedBlocks} />;
+    return <NotionPreview blocks={updatedBlocks as BlockObjectResponse[]} />;
   } catch (e: any) {
     console.error(e);
     return <div>error</div>;

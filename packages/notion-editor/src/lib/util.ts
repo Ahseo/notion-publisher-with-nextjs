@@ -1,4 +1,4 @@
-import { isEmptyOrSpace } from "@libs/utils";
+import { isEmptyOrSpace } from "@common-lib/utils";
 import { BlockFileObject, BlockObjectResponse } from "./types";
 
 export const getFilenameFromUrl = (fileUrl: string) => {
@@ -37,9 +37,12 @@ export const convertLanguageToOtherStyle = (language: string) => {
 export const getFileLink = (file: BlockFileObject) => {
   const id = file.type === "file" ? file.file.id : "";
   const url = file.type === "file" ? file.file.url || "" : file.external.url;
+  const originalFilename = getFilenameFromUrl(url);
 
   return {
     id,
     url,
+    originalFilename,
+    href: `/api/file/download?url=${url}&filename=${originalFilename}`,
   };
 };

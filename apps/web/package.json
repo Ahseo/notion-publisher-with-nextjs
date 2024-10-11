@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
-    "libs": "*",
+    "common-lib": "*",
     "next": "14.2.6",
     "notion-editor": "*",
     "react": "18.3.1",

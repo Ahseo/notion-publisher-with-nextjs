@@ -2,7 +2,7 @@ import { ToggleBlockObjectResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
 import { theme } from "@editor/src/lib/theme";
 import { NotionPreview } from "../NotionPreview";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 import { NotionToggleButton } from "./NotionToggleButton";
 import { DefaultBlockProps } from "./type";
 import { InitialBlock } from "./InitialBlock";

@@ -1,7 +1,7 @@
 import { theme } from "@editor/src/lib/theme";
 import { RichTextItemResponse } from "@editor/src/lib/types";
 import { NotionRichText } from "./NotionRichText";
-import { cn } from "@libs/utils";
+import { cn } from "@common-lib/utils";
 
 interface Props {
   captions: RichTextItemResponse[];
