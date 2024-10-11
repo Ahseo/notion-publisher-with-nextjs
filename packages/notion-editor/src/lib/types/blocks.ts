@@ -3718,8 +3718,6 @@ type TextRichTextItemResponse = {
 };
 
 export type RichTextItemResponse = TextRichTextItemResponse;
-// | MentionRichTextItemResponse
-// | EquationRichTextItemResponse;
 
 type BlockParentObject =
   | { type: "database_id"; database_id: string }
