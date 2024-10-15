@@ -1,81 +1,39 @@
-# Turborepo starter
+# Notion Publisher With Nextjs
 
-This is an official starter Turborepo.
+## 프로젝트 소개
 
-## Using this example
+- 본 프로젝트는 notion api를 활용, 노션으로 컨텐츠를 작성하면 isr을 이용하여 유저에게 컨텐츠를 보여주는, 노션을 에디터로 활용할 수 있는 도구를 구성한 것입니다.
+- [turbo repository](https://turbo.build/) 기반 모노레포로 구성이 되어있으며 [React](https://ko.legacy.reactjs.org/), [typescript](https://www.typescriptlang.org/), [tailwindcss](https://tailwindcss.com/), [nextjs](https://nextjs.org/) 등을 사용하였습니다.
 
-Run the following command:
+## 프로젝트 구성
 
-```sh
-npx create-turbo@latest
-```
+### app
 
-## What's inside?
+- web: Next.js 기반의 notion 컨텐츠를 보여주는 앱
+  - `/${id}`: notion 컨텐츠 id를 넣으면 해당 컨텐츠를 볼 수 있음.
 
-This Turborepo includes the following packages/apps:
+### packages
 
-### Apps and Packages
+- notion-editor: notion 컨텐츠 id를 기반, 화면에 각 컴포넌트를 불러올 수 있는 패키지
+- common-lib: 공통적으로 사용하는 유틸성 함수들을 모아둔 패키지
+- eslint-config: base가 되는 eslint config
+- tailwind-config: base가 되는 tailwind config
+- typescript-config: base가 되는 typescript config
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## 프로젝트 시작
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### 사전 준비
 
-### Utilities
+- notion content의 id는 [여기](https://developers.notion.com/docs/working-with-page-content#modeling-content-as-blocks)를 참고합니다.
+- `.env.local`을 만들고 `.env.example`을 참고하여 `NOTION_INTEGRATION_TOKEN`에 직접 [Notion Integration](https://www.notion.so/integrations/all)을 구성하고 그 secret을 넣어줍니다.
 
-This Turborepo has some additional tools already setup for you:
+### 프로젝트 스크립트
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+root directory에서 실행합니다.
 
-### Build
+- dev 환경 실행 : `yarn dev`
+- build: `yarn build`
 
-To build all apps and packages, run the following command:
+### 배포 내용
 
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [링크](https://notion-publisher-with-nextjs-nx1wa5bjt.vercel.app/)
