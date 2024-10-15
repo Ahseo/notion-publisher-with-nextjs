@@ -43,6 +43,7 @@ export const getFileLink = (file: BlockFileObject) => {
     id,
     url,
     originalFilename,
+    // TODO: add download api
     href: `/api/file/download?url=${url}&filename=${originalFilename}`,
   };
 };

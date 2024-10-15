@@ -14,6 +14,7 @@ export const NotionImage = ({ block }: Props) => {
 
   return (
     <figure className={cn(theme.blockType.image)}>
+      {/* TODO: add design */}
       <img width="80%" src={url} alt={block.id} />
       {block.image.caption.length > 0 && (
         <NotionCaption captions={block.image.caption} />

@@ -15,7 +15,7 @@ export const getNotionBlocks = async (pageId: string, blockId: string) => {
     },
     // revalidate tag
     next: {
-      tags: ["notion"],
+      tags: ["notion-" + pageId],
     },
   };
 

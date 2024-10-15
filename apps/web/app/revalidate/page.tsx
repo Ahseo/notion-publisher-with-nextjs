@@ -15,6 +15,7 @@ export default function RevalidatePage() {
 
     const response = await fetch("/revalidate-action", {
       method: "POST",
+      body: JSON.stringify({ tag: id }),
     });
 
     if (response.ok) {
