@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function RevalidatePage() {
   const [id, setId] = useState("");
+  const [type, setType] = useState<"default" | "isr">("default");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -13,14 +14,18 @@ export default function RevalidatePage() {
     setMessage("Revalidating...");
     setLoading(true);
 
-    const response = await fetch("/revalidate-action", {
+    const response = await fetch("/api/revalidate", {
       method: "POST",
-      body: JSON.stringify({ tag: id }),
+      body: JSON.stringify({ id, type: "default" }),
     });
 
     if (response.ok) {
       setMessage("Revalidation 성공!");
-      router.replace("/" + id);
+      if (type === "isr") {
+        router.replace("/isr/" + id);
+        return;
+      }
+      router.replace("/default/" + id);
     } else {
       setMessage("Revalidation 실패!");
     }
@@ -28,8 +33,12 @@ export default function RevalidatePage() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <h1>Revalidate Notion Page</h1>
+      <select value={type} onChange={(e) => setType(e.target.value as any)}>
+        <option value="default">Default</option>
+        <option value="isr">ISR</option>
+      </select>
       <input
         type="text"
         value={id}

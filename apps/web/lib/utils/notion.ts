@@ -51,3 +51,17 @@ export const getChildrenBlocks = async (
   };
   return updatedBlock;
 };
+
+export const getNotionData = async (pageId: string) => {
+  const initialBlocks: PartialBlockObjectResponse[] = await getNotionBlocks(
+    pageId,
+    pageId
+  );
+  const updatedBlocks: PartialBlockObjectResponse[] = await Promise.all(
+    initialBlocks.map(async (block) => {
+      const result = await getChildrenBlocks(pageId, block);
+      return result;
+    })
+  );
+  return updatedBlocks;
+};

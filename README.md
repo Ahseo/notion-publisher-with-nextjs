@@ -2,7 +2,7 @@
 
 ## 프로젝트 소개
 
-- 본 프로젝트는 notion api를 활용, 노션으로 컨텐츠를 작성하면 isr을 이용하여 유저에게 컨텐츠를 보여주는, 노션을 에디터로 활용할 수 있는 도구를 구성한 것입니다.
+- 본 프로젝트는 notion api를 활용, 노션으로 컨텐츠를 작성하면 유저에게 컨텐츠를 보여주는, 노션을 에디터로 활용할 수 있는 도구를 구성한 것입니다.
 - [turbo repository](https://turbo.build/) 기반 모노레포로 구성이 되어있으며 [React](https://ko.legacy.reactjs.org/), [typescript](https://www.typescriptlang.org/), [tailwindcss](https://tailwindcss.com/), [nextjs](https://nextjs.org/) 등을 사용하였습니다.
 
 ## 프로젝트 구성
