@@ -36,4 +36,4 @@ root directory에서 실행합니다.
 
 ### 배포 내용
 
-- [링크](https://notion-publisher-with-nextjs-nx1wa5bjt.vercel.app/)
+- (TBD)
